@@ -19,7 +19,7 @@ const config = {
                 {
                     loader: "css-loader",
                     options: {
-                        module: true,
+                        // module: true,
                         url: false,
                         minimize: true,
                         sourceMap: true

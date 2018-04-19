@@ -1,0 +1,81 @@
+.item_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .item{
+        display: flex;
+        padding: 10px 0 10px 10px;
+        font-size: 14px;
+        background-color: #fff;
+        margin-bottom: 1px;
+        align-items: center;
+        position: relative;
+        .avator{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            
+            >img{
+                max-width: 100%;
+            }
+        }
+        .count{
+            display: flex;
+            align-items: baseline;
+            width: 70px;
+            justify-content: center;
+            .reply_count{
+                color: #9e78c0;
+                font-size: 14px;
+            }
+            .visit_count{
+                font-size: 10px;
+                color: #b4b4b4;
+            }
+        }
+        .tab{
+            background-color: #e5e5e5;
+            color: #999;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .top,
+        .good{
+            background: #80bd01;
+            padding: 2px 4px;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 12px;
+        }
+        .title{
+            width: 70%;
+            overflow: hidden;
+            color: #333;
+            font-size: 14px;
+            text-overflow:ellipsis; 
+            white-space: nowrap; 
+        }
+        .title:visited {
+            color: #888;
+        }
+        .last_reply_time{
+            position: absolute;
+            text-align: right;
+            min-width: 50px;
+            display: inline-block;
+            white-space: nowrap;
+            right: 20px;
+            top: 50%;
+            font-size: 12px;
+            color:  #888;
+            transform: translateY(-50%);
+        }
+        
+    }
+    .item:last-of-type{
+        margin-bottom: 0;
+    }
+}

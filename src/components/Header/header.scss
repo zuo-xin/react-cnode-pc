@@ -1,4 +1,4 @@
-:local(#header){
+#header{
     width: 100%;
     
     background: #444;
@@ -7,6 +7,12 @@
         width: 1200px;
         margin: 0 auto;
         height: 50px;
+        .form{
+            display: inline-block;
+            .sbtn{
+                opacity: 0;
+            }
+        }
         .logo{
             display: inline-block;
             width: 120px;
@@ -34,5 +40,9 @@
             vertical-align: middle;
             margin-top: 12px;
         }
+        .search:focus{
+            background-color: #fff;
+        }
+        
     }
 }

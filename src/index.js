@@ -6,8 +6,6 @@ import style from './index.scss'
 
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+    <App />,
     document.getElementById("app")
 )
