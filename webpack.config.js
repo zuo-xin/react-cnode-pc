@@ -9,10 +9,27 @@ const config = {
     },
     output: {
         path: __dirname + '/dist',
-        filename: '[name]-[hash].js'
+        filename: '[name]-[hash].js',
+        publicPath: '/'
     },
     module: {
         rules: [{
+            test: /\.css$/,
+            use:[
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: "css-loader",
+                    options: {
+                        // module: true,
+                        url: false,
+                        minimize: true,
+                        sourceMap: true
+                    }
+                }, {
+                    loader: "postcss-loader"
+                }
+            ]
+        },{
             test: /\.scss$/,
             use:[
                 MiniCssExtractPlugin.loader,

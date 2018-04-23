@@ -7,7 +7,8 @@ module.exports = Object.assign({}, config, {
         contentBase: __dirname + '/src',
         port: 1943,
         historyApiFallback: true,
-        historyApiFallback: true,
+        hot:true,
+        inline:true,
         proxy: {
             '/api': {
                 target: 'https://cnodejs.org/',
