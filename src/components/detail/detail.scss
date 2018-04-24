@@ -1,1 +1,99 @@
+.detail_box{
+    display: block;
+    margin:0 auto 0 auto;
+    background: #e1e1e1;
+    padding: 1px 0;
+    .detail{
+        width: 1200px;
+        margin: 15px auto 15px auto;
+        .topic_box{
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            .topic_box_top{
+                display:flex;
+                flex-direction: row;
+                align-items: flex-end;
+                margin-bottom: 10px;
+                .topic_status{
+                    border-radius: 3px;
+                    color: #fff;
+                    font-size: 12px;
+                }
+                .topic_green{
+                    background: #80bd01;
+                    padding: 2px 4px;
+                    margin-right: 10px;
+                }
+                .topic_title{
+                    font-size: 22px;
+                    font-weight: 700;
+                    width: 75%;
+                    line-height: 1.3;
+                    color: #000;
+                }
+            }
+            .topic_info{
+                font-size: 12px;
+                color: #838383;
+            }
+        }
+        .reply_box{
+            .reply_title{
+                padding: 10px;
+                background-color: #f6f6f6;
+                border-radius: 3px 3px 0 0;
 
+            }
+            .reply_content{
+                background: #fff;
+                .reply_item{
+                    padding: 10px;
+                    border-top:1px solid #f0f0f0;
+                    .reply_top{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        .reply_avator{
+                            display: inline-block;
+                            width: 30px;
+                            height: 30px;
+
+                        }
+                        .reply_info{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            .reply_author{
+                                font-size: 12px;
+                                font-weight: 700;
+                                color: #666;
+                                text-decoration: none;
+                            }
+                            .reply_time{
+                                font-size: 12px;
+                                color: #08c;
+
+                            }
+                            >span{
+                                color: #fff;
+                               
+                                padding: 2px;
+                                font-size: 12px;
+                            }
+                            .isauthor{
+                                background-color: #6ba44e;
+
+                            }
+                        }
+                    }
+                    .replay_content{
+                        padding-left: 50px;
+                    }
+                    
+                }
+               
+            }
+        }
+    }
+}
