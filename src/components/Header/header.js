@@ -28,10 +28,10 @@ class Header extends React.Component{
             <div id="header">
                 <div className="head">
                     <Link className="logo" to="/"></Link>
-                    <form onSubmit={(e)=>this.handleSubmit(e)} className="form">
+                    {/* <form onSubmit={(e)=>this.handleSubmit(e)} className="form">
                         <input onChange={(e) =>this.handleChange(e)} className="search" />
                         <button type="submit" className="sbtn"></button>
-                    </form>
+                    </form> */}
                 </div>
             </div>
         )
