@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import util from '../util/util.js'
 import classnames from 'classnames'
 import Loading from '../loading/loading.js'
 import { message } from "antd"
@@ -10,7 +11,18 @@ class Detail extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            showLoading:true
+            showLoading:true,
+            topic_title:"",
+            topic_info:"",
+            reply_info:"",
+            reply_content:"",
+            is_green:false,
+            is_green_text:"",
+            isauthor:false,
+            greenObj:{
+                good:"精华",
+                top:"置顶"
+            }
         }
     }
     componentDidMount(){
@@ -30,6 +42,11 @@ class Detail extends React.Component{
     }
     setData(data){
         console.log(data)
+        this.setState({
+            topic_title:data.title,
+            topic_info:`•发布于${util.formatDate(data.create_at)} •作者${data.author.loginname} •${data.visit_count}次浏览 •来自${util.tabObj[data.tab]}`,
+            is_green:(data.top||data.good)?true:false
+        })
     }
     render(){
         return (
@@ -39,10 +56,10 @@ class Detail extends React.Component{
                     <div className="topic_box">
                         <div className="topic_box_top">
                             <div className={classnames({topic_green:true,topic_status:true})}>置顶</div>
-                            <div className="topic_title">前端女生转行</div>
+                            <div className="topic_title">{this.state.topic_title}</div>
                         </div>
                        
-                        <div className="topic_info"> 发布于 4 小时前  作者 jiayin3204  271 次浏览  来自 问答</div>
+                        <div className="topic_info">{this.state.topic_info}</div>
                     </div>
                     <div className="reply_box">
                         <div className="reply_title">16回复</div>
@@ -55,7 +72,6 @@ class Detail extends React.Component{
                                         <div className="replay_time"> 1楼•9 小时前</div>
                                         <span className={classnames({isauthor:true})}></span>
                                     </div>
-                                    
                                 </div>
                                 <div className="replay_content">@nullcc 爱学，但是不知道学啥，怎么学习</div>
                             </div>
