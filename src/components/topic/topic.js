@@ -10,6 +10,7 @@ class Topic extends React.Component{
         super(props)
     }
     render(){
+        document.title="CNode：Node.js专业中文社区"
         return (
             <div className="topic">
                 <TopNav></TopNav>

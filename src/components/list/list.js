@@ -49,8 +49,6 @@ class List extends React.Component{
             curPage:(tab===prevtab)?(util.getQueryStringArgs(location)).page:"1"
         })
         this.getList('/api/v1/topics?page='+((tab===prevtab)?(util.getQueryStringArgs(location)).page:"1")+'&limit=15&tab='+tab)
-    }else{
-
     }
     }
     getList(url){
